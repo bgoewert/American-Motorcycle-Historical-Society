@@ -4,10 +4,9 @@
 
 This is an educational project for St. Louis Community College IS142 "Web Development". Website project 1 of 3.
 
-
 ## Proposal
 
-Download the [website proposal](https://github.com/bgoewert/AMHS-Website/raw/main/IS142_WebsiteProposal_AMHS.docx).
+Download the [website proposal](https://github.com/bgoewert/AMHS-Website/raw/main/docs/IS142_WebsiteProposal_AMHS.docx).
 
 ## Design and Branding
 
