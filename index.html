@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Motorcycle Historical Society</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*.hero {
+            background-image: url(./media/images/1948_Daytona-200_JosephScherschel-Time&LifePictures_000893678_RaceStart.jpg);
+            background-position-y: 25%;
+        } */
+        .hero img {
+            object-position: 0 25%;
+        }
+        .hero section {
+            top: 40%;
+        }
+        .featured-story section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 4rem 0;
+        }
+        @media only screen and (min-width: 1366px) {
+            .featured-story {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 4rem 0;
+            }
+            .featured-story img {
+                height: 400px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+<body id="homepage">
+    <div class="hero">
+        <header>
+            <a href="./index.html" class="org">
+                <img class="org-logo" src="media/logo/AMHS_Logo_Primary.webp" alt="Logo for American Motorcycle Historical Society">
+                <h1 class="org-name">American Motorcycle Historical Society</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="motorcycles/index.html">Motorcycles</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Museums</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#"><img src="media/icons/magnifying-glass.svg" alt="search icon"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <img class="bw-to-blue" src="./media/images/1948_Daytona-200_JosephScherschel-Time&LifePictures_000893678_RaceStart.jpg" alt="Starting line at the Daytona 200 in 1948">
+        <section>
+            <h2>Pushing Limits, Breaking Records</h2>
+            <p>Travel back in time to witness iconic rivalries,<br> legendary riders, and groundbreaking innovations.</p>
+            <a href="#"><button>Discover Racing History</button></a>
+        </section>
+    </div>
+    <main>
+        <div class="section">
+            <article class="featured-story">
+                <img class="bw-to-blue" src="./media/images/lewis&edgar-reed-on-harleys-1912-motorcycle-club_1440x1130.webp" alt="Motorcycle club on Harley-Davidson and Excelsior motorcycles circa 1912">
+                <section>
+                    <h3>Early Harley-Davidson</h3>
+                    <p>From the first prototype to the Model 11F, discover the history of Pre-War Harley-Davidson Motorcycles and the roles they played during this emergent period</p>
+                    <a href="#"><button>Learn More</button></a>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-menu">
+            <a href="./index.html" class="org">
+                <img class="org-logo" src="media/logo/AMHS_Logo_Primary.webp" alt="Logo for American Motorcycle Historical Society">
+                <span class="org-name">American Motorcycle Historical Society</span>
+            </a>
+            <nav>
+                <ul>
+                    <li>Contact</li>
+                    <li>About</li>
+                    <li>Privacy</li>
+                    <li>Legal</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="copyright">Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> American Motorcycle Historical Society</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+:root{
+    --amhs-dark-blue: #2E3F5C;
+    --amhs-bright-blue: #0050DB;
+    --amhs-blue: #27529C;
+    --amhs-gold: #DB9500;
+    --amhs-brown: #86692D;
+    --amhs-serif: 'Source Serif 4', 'Times New Roman', serif;
+    --amhs-sans-serif: 'Source Sans Pro', 'Arial', sans-serif;
+    --amhs-h1-size: 48px;
+    --amhs-h2-size: 40px;
+    --amhs-h3-size: 34px;
+    --amhs-h4-size: 28px;
+    --amhs-h5-size: 20px;
+    --amhs-h6-size: 16px;
+}
+
+html,
+body{
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--amhs-serif);
+    font-weight: 500;
+    color: var(--amhs-dark-blue);
+    text-transform: capitalize;
+}
+
+body{
+    font-size: 16px;
+    font-family: var(--amhs-sans-serif);
+    color: var(--amhs-dark-blue);
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+a {
+    color: var(--amhs-bright-blue);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--amhs-gold);
+    text-decoration: underline;
+}
+
+a:visited,
+a.active {
+    color: var(--amhs-brown);
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="file"]::file-selector-button {
+    background-color: var(--amhs-gold);
+    color: var(--amhs-dark-blue);
+    border: 2px solid transparent;
+    padding: 0.5em 1em;
+    font-size: 16pt;
+    border-radius: 10px;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+input[type="file"]::file-selector-button:hover {
+    /* background-color: var(--amhs-brown); */
+    /* color: white; */
+    border-color: var(--amhs-dark-blue);
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+input[type="file"]::file-selector-button:active {
+    background-color: var(--amhs-brown);
+    /* color: white; */
+}
+
+.org {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.org-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.org-name {
+    font-size: var(--amhs-h3-size);
+    font-family: var(--amhs-serif);
+    font-weight: 500;
+}
+
+header,
+footer {
+    padding: 2em 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--amhs-dark-blue);
+    color: white;
+}
+
+footer .org-logo {
+    /* Specific img color using filters. See https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(136deg) brightness(104%) contrast(100%);
+    width: 60px;
+}
+
+footer .org-name {
+    font-size: var(--amhs-h5-size);
+    max-width: 200px;
+}
+
+header a:visited,
+footer a:visited {
+    color: unset;
+}
+
+header a.org:hover,
+footer a.org:hover {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+}
+
+header nav {
+    font-size: var(--amhs-h5-size);
+}
+
+footer .footer-menu {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+footer .copyright {
+    font-size: 10pt;
+}
+
+.hero {
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -99;
+}
+
+.hero > section {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero > section h1,
+.hero > section h2 {
+    font-size: var(--amhs-h1-size);
+    margin: 0;
+}
+
+.hero > section p {
+    font-size: var(--amhs-h5-size);
+    margin: 0;
+}
+
+main > div.section > * {
+    max-width: 1366px;
+    margin: auto;
+}
+
+.featured-story {
+    display: flex;
+    gap: 3em;
+}
+
+.bw-to-blue {
+    filter: sepia(100%) saturate(100%) brightness(100%) hue-rotate(173deg);
+}
+
+@media only screen and (min-width: 1366px) {
+    .featured-story {
+        padding: 6rem 2rem;
+    }
+    .featured-story img {
+        border-radius: 10px;
+    }
+}
