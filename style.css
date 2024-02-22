@@ -7,13 +7,12 @@
     --amhs-white: #F5F5F5;
     --amhs-serif: 'Source Serif 4', 'Times New Roman', serif;
     --amhs-sans-serif: 'Source Sans Pro', 'Arial', sans-serif;
-    --amhs-h1-size: clamp(2rem, 4vw + 0.5rem, 3rem);
-    /* 48px */
-    --amhs-h2-size: clamp(1.5rem, 3vw + 0.25rem, 2.5rem);
-    --amhs-h3-size: clamp(1.25rem, 2.5vw + 0.15rem, 2rem);
-    --amhs-h4-size: clamp(1rem, 2vw + 0.1rem, 1.5rem);
-    --amhs-h5-size: clamp(1rem, 1.5vw + 0.1rem, 1.25rem);
-    --amhs-h6-size: clamp(1rem, 1.125vw + 0.1rem, 1.125rem);
+    --amhs-h1-size: clamp(2rem, 4vw + 0.5rem, 3rem); /* 48px */
+    --amhs-h2-size: clamp(1.5rem, 3vw + 0.25rem, 2.5rem); /* 40px */
+    --amhs-h3-size: clamp(1.25rem, 2.5vw + 0.25rem, 2.125rem); /* 34px */
+    --amhs-h4-size: clamp(1.125rem, 2vw + 0.1rem, 1.75rem); /* 26px */
+    --amhs-h5-size: clamp(1rem, 1.5vw + 0.1rem, 1.25rem); /* 20px */
+    --amhs-h6-size: clamp(1rem, 1.125vw + 0.1rem, 1.125rem); /* 18px */
     --amhs-caption-size: clamp(0.75rem, 1vw + 0.05rem, 0.8rem);
     --amhs-row-gap: 6rem;
     --amhs-row-padding: 2rem;
