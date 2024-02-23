@@ -1,0 +1,28 @@
+{
+    "title": "AMHS Event Calendar",
+    "@type": "Group",
+    "items": [
+        {
+            "title": "Cycle Showcase St. Louis",
+            "@type": "Event",
+            "description": "Cycle Showcase St. Louis is a motorcycle show that features custom bikes, live music, and food and drink.",
+            "startDate": "2024-02-10T00:00:00-06:00",
+            "endDate": "2024-02-11T00:00:00-06:00",
+            "location": {
+                "name": "The Moto Museum"
+            },
+            "image": "images/cycle-showcase-st-louis.jpg"
+        },
+        {
+            "title": "Loretta Lynn's North Central Area Qualifier",
+            "@type": "Event",
+            "description": "The North Central Area Qualifier",
+            "startDate": "2024-04-05T00:00:00-06:00",
+            "endDate": "2024-04-07T00:00:00-06:00",
+            "location": {
+                "name": "Archview MX Park"
+            },
+            "image": "images/archview-mx-park-logo.png"
+        }
+    ]
+}
