@@ -1,0 +1,42 @@
+version: '1.0'
+# ENVIRONMENT VARIABLES
+# ---------------------
+# PROJECT_NAME
+# PROJECT_ROOT
+# DOCKER_PHP_VERSION
+# DOCKER_PHP_VARIANT
+# DOCKER_HTTP_PORT
+# DOCKER_MYSQL_VERSION
+# MYSQL_HOST
+# MYSQL_ROOT_PASSWORD
+# MYSQL_DATA_FILE
+name: ${PROJECT_NAME:-lamp}
+volumes:
+  data:
+    name: ${PROJECT_NAME:-lamp}-data
+services:
+  webserver:
+    build:
+      context: .
+      args:
+        - PHP_VERSION=${DOCKER_PHP_VERSION:-latest}
+        - PHP_VARIANT=${DOCKER_PHP_VARIANT:-apache}
+    container_name: ${PROJECT_NAME:-lamp}-webserver
+    volumes:
+      - ${PROJECT_ROOT:-./}:/var/www/html/${PROJECT_ROOT:-./}
+    ports:
+      - ${DOCKER_HTTP_PORT:-8080}:80
+    depends_on:
+      - database
+    environment:
+      - MYSQL_HOST=${MYSQL_HOST:-database}
+  database:
+    image: mysql:${DOCKER_MYSQL_VERSION:-latest}
+    container_name: ${PROJECT_NAME:-lamp}-database
+    volumes:
+      - data:/var/lib/mysql
+      # Uncomment to import data on first run
+      # - ${MYSQL_DATA_FILE}:/docker-entrypoint-initdb.d/${PROJECT_NAME:-lamp}-data.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-dbadmin}
+      - MYSQL_HOST=${MYSQL_HOST:-database}
