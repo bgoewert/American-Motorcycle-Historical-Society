@@ -3,6 +3,7 @@
     "@type": "Group",
     "items": [
         {
+            "id": 1,
             "title": "Cycle Showcase St. Louis",
             "@type": "Event",
             "description": "Cycle Showcase St. Louis is a motorcycle show that features custom bikes, live music, and food and drink.",
@@ -11,9 +12,12 @@
             "location": {
                 "name": "The Moto Museum"
             },
-            "image": "images/cycle-showcase-st-louis.jpg"
+            "image": "images/cycle-showcase-st-louis.jpg",
+            "url": "https://www.cycleshowcasestl.com/",
+            "category": "Motorcycle Show"
         },
         {
+            "id": 2,
             "title": "Loretta Lynn's North Central Area Qualifier",
             "@type": "Event",
             "description": "The North Central Area Qualifier",
@@ -22,7 +26,9 @@
             "location": {
                 "name": "Archview MX Park"
             },
-            "image": "images/archview-mx-park-logo.png"
+            "image": "images/AMA-LLAQ-Logo.webp",
+            "url": "https://mxsports.com/event/archview-mx-park",
+            "category": "Motocross"
         }
     ]
 }
