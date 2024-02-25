@@ -30,21 +30,45 @@ function appendEvents() {
     // Sort events by date
     Object.entries( events ).sort( ( a, b ) => a[ 0 ] - b[ 0 ] );
 
-    Object.entries( events ).forEach( ( id, month ) => {
+    for ( const [ id, month ] of Object.entries( events ) ) {
         const monthName = new Date( id ).toLocaleString( "default", { month: "long" } );
         const year = id.slice( 0, 4 );
 
-        console.log( month, id );
-
-        // eventsList.innerHTML += `<h2>${ monthName } ${ year }</h2>`;
-
         month.forEach( event => {
-            const date = new Date( event.startDate );
-            const day = date.getDate();
-            const month = date.toLocaleString( "default", { month: "long" } );
-            const year = date.getFullYear();
+            const startDate = new Date( event.startDate );
+            const startDay = startDate.getDate();
+            const startMonth = startDate.toLocaleString( "default", { month: "long" } );
+            const startYear = startDate.getFullYear();
+            const endDate = new Date( event.endDate );
+            const endDay = endDate.getDate();
+            const endMonth = endDate.toLocaleString( "default", { month: "long" } );
+            const endYear = endDate.getFullYear();
 
-            eventsList.innerHTML += `<li>${ month } ${ day }, ${ year }: ${ event.summary }</li>`;
+            let dateFormatted = "";
+            if ( startYear === endYear ) {
+                if ( startMonth === endMonth ) {
+                    if ( startDay === endDay ) {
+                        dateFormatted = `${ startMonth } ${ startDay }, ${ startYear }`;
+                    } else {
+                        dateFormatted = `${ startMonth } ${ startDay }-${ endDay }, ${ startYear }`;
+                    }
+                } else {
+                    dateFormatted = `${ startMonth } ${ startDay } - ${ endMonth } ${ endDay }, ${ startYear }`;
+                }
+            }
+
+            let list = '';
+
+            list += `<li>
+            <h3>${ event.title }</h3>
+            <div>
+                <time datetime="${ event.startDate }/${ event.endDate }">${ dateFormatted }</time>
+                <p>${ event.description }</p>
+                <address>${ event.location.name }</address>
+            </div>
+            </li>`;
+
+            eventsList.innerHTML += `<li id="${ id }"><h2>${ startMonth } ${ startDay }, ${ startYear }</h2><ul class="events-list-month">${ list }</ul></li>`;
         } );
-    } );
+    };
 }
