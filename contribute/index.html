@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contibute - AMHS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/svg" href="../media/logo/AMHS_Logo_Primary.svg">
+    <meta name="robots" content="noindex, nofollow">
+    <script src="memberships.js"></script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', displayMemberships() );
+    </script>
+    <style>
+        #intro {
+            background-color: var(--amhs-light-blue);
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #intro div {
+            max-width: var(--amhs-content-width);
+            display: flex;
+            gap: var(--amhs-column-gap);
+            margin: auto;
+            padding: var(--amhs-row-gap);
+        }
+        #intro div article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="org">
+            <img class="org-logo" src="../media/logo/AMHS_Logo_Primary.webp" alt="Logo for American Motorcycle Historical Society">
+            <p class="org-name">American Motorcycle Historical Society</p>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/motorcycles/">Motorcycles</a></li>
+                <li><a href="/events/">Events</a></li>
+                <li><a href="/museums/">Museums</a></li>
+                <li><a href="#" class="active">Contribute</a></li>
+                <li><img src="../media/icons/magnifying-glass.svg" alt="search icon"></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <header aria-label="page header">
+            <div>
+                <h1>Contribute</h1>
+                <!-- <p>subheading</p> -->
+            </div>
+        </header>
+        <section id="intro" aria-label="introduction to contributing">
+            <div>
+                <article>
+                    <h2>Join the AMHS!</h2>
+                    <p>Are you a motorcycle enthusiast with a love for American history? Then join us and become part of a community dedicated to preserving and celebrating the rich legacy of motorcycling in the United States.</p>
+                    <a href="/contribute/" class="button">Join Our Society</a>
+                </article>
+                <article>
+                    <h2>Donate!</h2>
+                    <p>Beyond membership, you can also support our mission through a one-time donation. Your contributions help us develop engaging educational programs and exhibits, maintain and expand our collection, and organize exciting events and rallies for motorcycle enthusiasts.</p>
+                    <a href="/contribute/" class="button">Make a Contribution</a>
+                </article>
+            </div>
+        </section>
+        <div>
+            <h3>Membership Levels</h3>
+            <article id="list-container" aria-label="list of membership tiers">
+                <ul class="object-list"></ul>
+                <aside id="list-filter"></aside>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <a href="/" class="org">
+            <img class="org-logo" src="../media/logo/AMHS_Logo_Primary.webp" alt="Logo for American Motorcycle Historical Society">
+            <span class="org-name">American Motorcycle Historical Society</span>
+        </a>
+        <nav>
+            <ul>
+                <li>Contact</li>
+                <li>About</li>
+                <li>Privacy</li>
+                <li>Legal</li>
+            </ul>
+        </nav>
+        <div class="copyright">Copyright &copy;
+            <script>document.write( new Date().getFullYear() );</script> Brennan Goewert
+        </div>
+    </footer>
+</body>
+
+</html>
