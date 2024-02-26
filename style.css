@@ -177,7 +177,7 @@ footer a.org:hover {
 }
 
 header nav {
-    font-size: var(--amhs-h5-size);
+    font-size: var(--amhs-h6-size);
 }
 
 footer .copyright {
@@ -356,24 +356,27 @@ main > header div {
     gap: var(--amhs-row-gap);
 }
 
-ul#event-list {
+#event-list {
     list-style: none;
     padding: 0;
     width: fit-content;
 }
 
-ul#event-list ul.event-list-month {
+#event-list .event-list-month {
     margin: var(--amhs-row-gap) 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--amhs-row-gap);
 }
 
-ul#event-list .event-list-item {
+#event-list .event-list-item {
     border: 2px solid var(--amhs-dark-blue);
     border-radius: var(--amhs-border-radius);
 }
 
-ul#event-list .event-list-item article {
+#event-list .event-list-item article {
     display: flex;
     flex-direction: row;
     gap: var(--amhs-row-padding);
@@ -381,20 +384,20 @@ ul#event-list .event-list-item article {
     padding: var(--amhs-row-padding);
 }
 
-ul#event-list .event-list-item figure {
+#event-list .event-list-item figure {
     height: 100%;
     width: 30%;
     margin: auto 0;
 }
 
-ul#event-list .event-list-item img {
+#event-list .event-list-item img {
     width: 100%;
     max-height: 420px   ;
     object-fit: cover;
     border-radius: var(--amhs-border-radius);
 }
 
-ul#event-list .event-list-item .event-details {
+#event-list .event-list-item .event-details {
     width: 70%;
 }
 

@@ -1,8 +1,25 @@
 "use strict";
 
-const $ = ( selector ) => document.querySelectorAll( selector );
+// Get element(s) by CSS selector, using regex to check if the selector is an ID or class
+const $ = ( selector ) => {
+    // separate all selectors from the string
+    const selectors = selector.split( " " );
 
-const eventsList = $( "ul#event-list" )[ 0 ];
+    if ( selectors.length === 1 ) {
+        // if there is only one selector, return the element
+        return document.querySelector( selector );
+    } else {
+        // if the last selector is an ID, return the element
+        if ( selectors[ selectors.length - 1 ].match( /#[a-z]/i ) ) {
+            return document.querySelector( selector );
+        } else {
+            // else return a list of elements
+            return document.querySelectorAll( selector );
+        }
+    };
+};
+
+const eventsList = $( "ul#event-list" );
 
 const events = [];
 const categories = [];
@@ -66,6 +83,19 @@ function appendEvents() {
                 }
             }
 
+            let address = "";
+            if ( event.location ) {
+                address += event.location.name;
+                if ( event.location.address ) {
+                    address += `<br>
+                    ${ event.location.address.streetAddress }<br>
+                    ${ event.location.address.addressLocality }, ${ event.location.address.addressRegion } ${ event.location.address.postalCode }
+                    `;
+                }
+            } else {
+                address = "No address provided.";
+            }
+
             let list = '';
 
             list += `<li class="event-list-item" data-category="${ slugCategory }">\
@@ -77,19 +107,25 @@ function appendEvents() {
                         <h3>${ event.title }</h3>
                         <time datetime="${ event.startDate }/${ event.endDate }">${ dateFormatted }</time>
                         <p>${ event.description }</p>
-                        <address>${ event.location.name }</address>
+                        <address>${ address }</address>
                         <p><a href="${ event.url }" target="_blank" rel="noopener noreferrer">More info</a></p>
                     </div>
                 </article>
                 </li>`;
 
-            eventsList.innerHTML += `<li id="${ id }"><h2>${ startMonth }, ${ startYear }</h2><ul class="event-list-month">${ list }</ul></li>`;
+            if ( !document.getElementById( id ) ) {
+                eventsList.innerHTML += `<li id="${ id }"><h2>${ startMonth }, ${ startYear }</h2><ul class="event-list-month">${ list }</ul></li>`;
+            } else {
+                const monthItem = document.getElementById( id );
+                const month = monthItem.querySelector( ".event-list-month" );
+                month.innerHTML += list;
+            }
         }
     } );
 }
 
 function appendCategoryFilter() {
-    const categoryFilter = $( "#event-filter" )[ 0 ];
+    const categoryFilter = $( "#event-filter" );
 
     const categoryList = document.createElement( "ul" );
     categoryList.id = "event-category-list";
@@ -111,17 +147,23 @@ function filterEvents() {
 
     if ( categoryCheckboxes.length === 0 ) return;
 
+    const noFilter = Array.from( categoryCheckboxes ).every( checkbox => checkbox.checked === false );
+
     categoryCheckboxes.forEach( checkbox => {
         const categoryEvents = events.filter( event => event.category === checkbox.value );
 
-        if ( checkbox.checked ) {
-            categoryEvents.forEach( event => events[ event.id ].active = true );
+        if ( noFilter ) {
+            events.forEach( event => event.active = true );
         } else {
-            categoryEvents.forEach( event => event.active = false );
+            categoryEvents.forEach( event => {
+                if ( checkbox.checked ) {
+                    event.active = true;
+                } else {
+                    event.active = false;
+                }
+            } );
         }
     } );
-
-    console.log( events );
 
     eventsList.innerHTML = "";
     appendEvents();
