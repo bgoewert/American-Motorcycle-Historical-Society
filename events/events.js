@@ -54,11 +54,6 @@ function displayEvents( limit = 0, divideMonths = true, filter = true ) {
 
 function appendEvents( divideMonths = true ) {
 
-    // Sort events by startDate
-    events.sort( ( a, b ) => {
-        return new Date( a.startDate ) - new Date( b.startDate );
-    } );
-
     events.forEach( event => {
         const id = event.startDate.slice( 0, 7 );
         const monthName = new Date( id ).toLocaleString( "default", { month: "long" } );
