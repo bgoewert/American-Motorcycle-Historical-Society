@@ -19,35 +19,47 @@ const $ = ( selector ) => {
     };
 };
 
-const eventsList = $( "ul#event-list" );
-
 const events = [];
 const categories = [];
 
-/* Get events from events.json */
-fetch( "events.json" )
-    .then( response => response.json() )
-    .then( data => {
-        data.items.forEach( event => {
-            // Get date object from start date
-            const date = new Date( event.startDate );
+function displayEvents( limit = 0, divideMonths = true, filter = true ) {
 
-            // Create heading for each month
-            const monthNumber = date.toISOString().slice( 5, 7 );
-            const year = date.getFullYear();
+    /* Get events from events.json */
+    fetch( "/events/events.json" )
+        .then( response => response.json() )
+        .then( data => {
 
-            event.active = true;
-            events.push( event );
-            categories.push( { "name": event.category, "active": false } );
+            // Sort events by startDate
+            data.items.sort( ( a, b ) => {
+                return new Date( a.startDate ) - new Date( b.startDate );
+            } );
+
+            // Limit the number of events to display
+            if ( limit ) {
+                data.items = data.items.slice( 0, limit );
+            }
+
+            data.items.forEach( event => {
+                // Get date object from start date
+                const date = new Date( event.startDate );
+
+                // Create heading for each month
+                const monthNumber = date.toISOString().slice( 5, 7 );
+                const year = date.getFullYear();
+
+                event.active = true;
+                events.push( event );
+                categories.push( { "name": event.category, "active": false } );
+            } );
+        } )
+        .then( () => {
+            appendEvents( divideMonths );
+            if ( filter ) appendCategoryFilter();
         } );
-    } )
-    .then( () => {
-        appendEvents();
-        appendCategoryFilter();
-    } );
 
+}
 
-function appendEvents() {
+function appendEvents( divideMonths = true ) {
 
     // Sort events by startDate
     events.sort( ( a, b ) => {
@@ -99,12 +111,12 @@ function appendEvents() {
             let list = '';
 
             list += `<li class="event-list-item" data-category="${ slugCategory }">\
-                <article>
+                <article class="event">
                     <figure>
                         <img src="${ event.image }" alt="Event image for ${ event.title }">
                     </figure>
                     <div class="event-details" aria-label="event details">
-                        <h3>${ event.title }</h3>
+                        <h4>${ event.title }</h4>
                         <time datetime="${ event.startDate }/${ event.endDate }">${ dateFormatted }</time>
                         <p>${ event.description }</p>
                         <address>${ address }</address>
@@ -114,7 +126,11 @@ function appendEvents() {
                 </li>`;
 
             if ( !document.getElementById( id ) ) {
-                eventsList.innerHTML += `<li id="${ id }"><h2>${ startMonth }, ${ startYear }</h2><ul class="event-list-month">${ list }</ul></li>`;
+                if ( divideMonths ) {
+                    $( "ul#event-list" ).innerHTML += `<li id="${ id }"><h2>${ startMonth }, ${ startYear }</h2><ul class="event-list-month">${ list }</ul></li>`;
+                } else {
+                    $( "ul#event-list" ).innerHTML += list;
+                }
             } else {
                 const monthItem = document.getElementById( id );
                 const month = monthItem.querySelector( ".event-list-month" );
@@ -165,6 +181,6 @@ function filterEvents() {
         }
     } );
 
-    eventsList.innerHTML = "";
+    $( "ul#event-list" ).innerHTML = "";
     appendEvents();
 };

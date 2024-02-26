@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/svg" href="../media/logo/AMHS_Logo_Primary.svg">
     <meta name="robots" content="noindex, nofollow">
-    <script src="events.js" async></script>
+    <script src="events.js"></script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', displayEvents() );
+    </script>
 </head>
 
 <body>
@@ -37,10 +40,10 @@
                 <p>Shows, Rides, and other meetups...</p>
             </div>
         </header>
-        <section id="event-container" aria-label="list of upcoming events">
+        <article id="event-container" aria-label="list of upcoming events">
             <ul id="event-list"></ul>
             <aside id="event-filter"></aside>
-        </section>
+        </article>
     </main>
     <footer>
         <a href="/" class="org">
