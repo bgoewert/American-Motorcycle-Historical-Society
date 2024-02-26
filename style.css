@@ -2,6 +2,7 @@
     --amhs-dark-blue: #2E3F5C;
     --amhs-bright-blue: #0050DB;
     --amhs-blue: #26519c;
+    --amhs-light-blue: color-mix(in srgb, var(--amhs-blue), white 60%);
     --amhs-gold: #DB9500;
     --amhs-light-gold: color-mix(in srgb, var(--amhs-gold), white 60%);
     --amhs-brown: #86692D;
@@ -396,17 +397,7 @@ main>article>aside {
     display: flex;
     flex-direction: row;
     gap: var(--amhs-row-padding);
-    align-items: center;
-    padding: var(--amhs-row-padding);
-}
-
-.object-list .object-list-item figure {
-    height: 100%;
-    width: 30%;
-    margin: auto 0;
-}
-
-.object-list .object-list-item img {
+    align-items: center;state
     width: 100%;
     max-height: 420px   ;
     object-fit: cover;
@@ -423,7 +414,7 @@ main>article>aside {
 }
 
 #list-filter ul li {
-    margin: 0;
+    margin: 0;state
 }
 
 @media only screen and (min-width:1366px) {
