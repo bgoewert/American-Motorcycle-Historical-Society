@@ -101,20 +101,20 @@
             background-color: color-mix(in srgb, var(--amhs-blue), white 70%);
         }
 
-        #event-list .event-list-item {
+        .object-list .event-list-item {
             border: none;
         }
 
-        #event-list .event-list-item .event {
+        .object-list .event-list-item .event {
             padding: 0;
             width: 100%;
         }
 
-        #event-list .event-list-item .event figure {
+        .object-list .event-list-item .event figure {
             display: none;
         }
 
-        #event-list .event-list-item .event-details {
+        .object-list .event-list-item .event-details {
             width: 100%;
         }
 
@@ -150,8 +150,8 @@
             <nav>
                 <ul>
                     <li><a href="/motorcycles">Motorcycles</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li>Museums</li>
+                    <li><a href="/events/">Events</a></li>
+                    <li><a href="/museums/">Museums</a></li>
                     <li>Contribute</li>
                     <li><img src="media/icons/magnifying-glass.svg" alt="search icon"></li>
                 </ul>
@@ -186,9 +186,9 @@
             <section class="content-container" aria-label="section-content">
                 <div class="content">
                     <h3>Upcoming Events</h3>
-                    <article id="event-container" aria-label="list of upcoming events">
-                        <ul id="event-list"></ul>
-                        <aside id="event-filter"></aside>
+                    <article id="list-container" aria-label="list of upcoming events">
+                        <ul class="object-list"></ul>
+                        <aside id="list-filter"></aside>
                     </article>
                     <a href="/events" class="button">View All Events</a>
                 </div>

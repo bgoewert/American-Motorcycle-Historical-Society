@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - AMHS</title>
+    <title>Museums - AMHS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/svg" href="../media/logo/AMHS_Logo_Primary.svg">
     <meta name="robots" content="noindex, nofollow">
-    <script src="events.js"></script>
+    <script src="museums.js"></script>
     <script>
-        document.addEventListener( 'DOMContentLoaded', displayEvents() );
+        document.addEventListener( 'DOMContentLoaded', displayMuseums() );
     </script>
 </head>
 
@@ -26,8 +26,8 @@
         <nav>
             <ul>
                 <li><a href="/motorcycles/">Motorcycles</a></li>
-                <li><a href="#" class="active">Events</a></li>
-                <li><a href="/museums/">Museums</a></li>
+                <li><a href="/events/">Events</a></li>
+                <li><a href="#" class="active">Museums</a></li>
                 <li>Contribute</li>
                 <li><img src="../media/icons/magnifying-glass.svg" alt="search icon"></li>
             </ul>
@@ -36,13 +36,24 @@
     <main>
         <header aria-label="page header">
             <div>
-                <h1>Upcoming Events</h1>
-                <p>Shows, Rides, and other meetups...</p>
+                <h1>Museums</h1>
+                <!-- <p>subheading</p> -->
             </div>
         </header>
-        <article id="list-container" aria-label="list of upcoming events">
-            <ul class="object-list"></ul>
-            <aside id="list-filter"></aside>
+        <article id="museum-container" aria-label="list of museums by state">
+            <ul id="museum-list"></ul>
+            <aside>
+                <article>
+                    <h5>Join the AMHS!</h5>
+                    <p>Are you a motorcycle enthusiast with a love for American history? Then join us and become part of a community dedicated to preserving and celebrating the rich legacy of motorcycling in the United States.</p>
+                    <a href="/contribute/" class="button">Join Our Society</a>
+                </article>
+                <article>
+                    <h5>Donate!</h5>
+                    <p>Beyond membership, you can also support our mission through a one-time donation. Your contributions help us develop engaging educational programs and exhibits, maintain and expand our collection, and organize exciting events and rallies for motorcycle enthusiasts.</p>
+                    <a href="/contribute/" class="button">Make a Contribution</a>
+                </article>
+            </aside>
         </article>
     </main>
     <footer>

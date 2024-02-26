@@ -127,9 +127,9 @@ function appendEvents( divideMonths = true ) {
 
             if ( !document.getElementById( id ) ) {
                 if ( divideMonths ) {
-                    $( "ul#event-list" ).innerHTML += `<li id="${ id }"><h2>${ startMonth }, ${ startYear }</h2><ul class="event-list-month">${ list }</ul></li>`;
+                    $( "ul.object-list" ).innerHTML += `<li id="${ id }"><h2>${ startMonth }, ${ startYear }</h2><ul class="event-list-month">${ list }</ul></li>`;
                 } else {
-                    $( "ul#event-list" ).innerHTML += list;
+                    $( "ul.object-list" ).innerHTML += list;
                 }
             } else {
                 const monthItem = document.getElementById( id );
@@ -141,7 +141,7 @@ function appendEvents( divideMonths = true ) {
 }
 
 function appendCategoryFilter() {
-    const categoryFilter = $( "#event-filter" );
+    const categoryFilter = $( "#list-filter" );
 
     const categoryList = document.createElement( "ul" );
     categoryList.id = "event-category-list";
@@ -181,6 +181,6 @@ function filterEvents() {
         }
     } );
 
-    $( "ul#event-list" ).innerHTML = "";
+    $( "ul.object-list" ).innerHTML = "";
     appendEvents();
 };
