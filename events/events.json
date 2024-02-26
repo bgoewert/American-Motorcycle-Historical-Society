@@ -10,7 +10,14 @@
             "startDate": "2024-02-10T00:00:00-06:00",
             "endDate": "2024-02-11T00:00:00-06:00",
             "location": {
-                "name": "The Moto Museum"
+                "name": "The Moto Museum",
+                "address": {
+                    "streetAddress": "3441 Olive St",
+                    "addressLocality": "St. Louis",
+                    "addressRegion": "MO",
+                    "postalCode": "63103",
+                    "addressCountry": "US"
+                }
             },
             "image": "images/cycle-showcase-st-louis.jpg",
             "url": "https://www.cycleshowcasestl.com/",
@@ -24,11 +31,39 @@
             "startDate": "2024-04-05T00:00:00-06:00",
             "endDate": "2024-04-07T00:00:00-06:00",
             "location": {
-                "name": "Archview MX Park"
+                "name": "Archview MX Park",
+                "address": {
+                    "streetAddress": "1700 E 1st St",
+                    "addressLocality": "Washington",
+                    "addressRegion": "MO",
+                    "postalCode": "63090",
+                    "addressCountry": "US"
+                }
             },
             "image": "images/AMA-LLAQ-Logo.webp",
             "url": "https://mxsports.com/event/archview-mx-park",
             "category": "Motocross"
+        },
+        {
+            "id": 3,
+            "title": "Talladega GP Track Days",
+            "@type": "Event",
+            "description": "Gear up for an exciting, sage and fun track day at Talladega GP hosted by Precision Track Days. If the sound of engines and thrill of speed ignite your passion, this event is your gateway to an adrenaline-charged experience.",
+            "startDate": "2024-04-06T07:00:00-06:00",
+            "endDate": "2024-04-06T17:00:00-06:00",
+            "location": {
+                "name": "Talladega GP Raceway",
+                "address": {
+                    "streetAddress": "46 Pilgrim Ln",
+                    "addressLocality": "Munford",
+                    "addressRegion": "AL",
+                    "postalCode": "36268",
+                    "addressCountry": "US"
+                }
+            },
+            "image": "images/Precision-Track-Days-Logo.png",
+            "category": "Track Day",
+            "url": "https://precisiontrackday.org/event/talladega-gp-track-days-apr-6th-2024/"
         }
     ]
 }
