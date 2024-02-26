@@ -1,0 +1,40 @@
+{
+    "title": "AMHS Museums",
+    "@type": "Group",
+    "items": [
+        {
+            "id": 1,
+            "title": "Barber Vintage Motorsports Museum",
+            "@type": "Museum",
+            "description": "For the people interested in automotive history, this place is a dream come true. Housing the largest motorcycle collection in the United States with more than 1,600 motorcycles and racing cars that date from the early 1900s to modern day. The museum began as the private collection of George W. Barber, a former racecar driver. Barber first opened a museum in 1995, but relocated to this larger facility in 2003.",
+            "location": {
+                "address": {
+                    "streetAddress": "6030 Barber Motorsports Pkwy",
+                    "addressLocality": "Leeds",
+                    "addressRegion": "AL",
+                    "postalCode": "35094",
+                    "addressCountry": "US"
+                }
+            },
+            "image": "/museums/images/Barber-Vintage-Motorsports-Museum-logo.svg",
+            "url": "http://www.barbermuseum.org/"
+        },
+        {
+            "id": 2,
+            "title": "Bill's Old Bike Barn",
+            "@type": "Museum",
+            "description": "In a wooded grove on the hill behind his parts shop, Bill Morris began to fulfill his life long dream and established Bill's Old Bike Barn in 1998. Years later, close to 200 amazing vintage motorcycles are stored in a 55,000 square ft building. The museum is in a constant state of evolution as new items and collections are added regularly.",
+            "location": {
+                "address": {
+                    "streetAddress": "7145 Columbia Blvd",
+                    "addressLocality": "Bloomsburg",
+                    "addressRegion": "PA",
+                    "postalCode": "17815",
+                    "addressCountry": "US"
+                }
+            },
+            "image": "/museums/images/Bills-Old-Bike-Barn-logo.png",
+            "url": "http://www.billsbikebarn.com/"
+        }
+    ]
+}

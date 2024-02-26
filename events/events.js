@@ -98,12 +98,12 @@ function appendEvents( divideMonths = true ) {
 
             let list = '';
 
-            list += `<li class="event-list-item" data-category="${ slugCategory }">\
-                <article class="event">
+            list += `<li class="object-list-item" data-category="${ slugCategory }">\
+                <article class="object">
                     <figure>
                         <img src="${ event.image }" alt="Event image for ${ event.title }">
                     </figure>
-                    <div class="event-details" aria-label="event details">
+                    <div class="object-list-item-details" aria-label="event details">
                         <h4>${ event.title }</h4>
                         <time datetime="${ event.startDate }/${ event.endDate }">${ dateFormatted }</time>
                         <p>${ event.description }</p>
@@ -115,13 +115,13 @@ function appendEvents( divideMonths = true ) {
 
             if ( !document.getElementById( id ) ) {
                 if ( divideMonths ) {
-                    $( "ul.object-list" ).innerHTML += `<li id="${ id }"><h2>${ startMonth }, ${ startYear }</h2><ul class="event-list-month">${ list }</ul></li>`;
+                    $( "ul.object-list" ).innerHTML += `<li id="${ id }"><h2>${ startMonth }, ${ startYear }</h2><ul class="object-list-section">${ list }</ul></li>`;
                 } else {
                     $( "ul.object-list" ).innerHTML += list;
                 }
             } else {
                 const monthItem = document.getElementById( id );
-                const month = monthItem.querySelector( ".event-list-month" );
+                const month = monthItem.querySelector( ".object-list-section" );
                 month.innerHTML += list;
             }
         }

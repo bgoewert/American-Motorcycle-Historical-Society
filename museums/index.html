@@ -15,6 +15,18 @@
     <script>
         document.addEventListener( 'DOMContentLoaded', displayMuseums() );
     </script>
+    <style>
+        #museum-container {
+            display: flex;
+            gap: var(--amhs-column-gap);
+        }
+        #museum-container aside {
+            width: 30%;
+        }
+        #museum-container .object-list {
+            width: 70%;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +53,7 @@
             </div>
         </header>
         <article id="museum-container" aria-label="list of museums by state">
-            <ul id="museum-list"></ul>
+            <ul class="object-list"></ul>
             <aside>
                 <article>
                     <h5>Join the AMHS!</h5>

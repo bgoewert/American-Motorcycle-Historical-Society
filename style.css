@@ -378,7 +378,7 @@ main>article>aside {
     width: fit-content;
 }
 
-.object-list .event-list-month {
+.object-list .object-list-section {
     margin: var(--amhs-row-gap) 0;
     padding: 0;
     list-style: none;
@@ -387,12 +387,12 @@ main>article>aside {
     gap: var(--amhs-row-gap);
 }
 
-.object-list .event-list-item {
+.object-list .object-list-item {
     border: 2px solid var(--amhs-dark-blue);
     border-radius: var(--amhs-border-radius);
 }
 
-.object-list .event-list-item .event {
+.object-list .object-list-item .object {
     display: flex;
     flex-direction: row;
     gap: var(--amhs-row-padding);
@@ -400,20 +400,20 @@ main>article>aside {
     padding: var(--amhs-row-padding);
 }
 
-.object-list .event-list-item figure {
+.object-list .object-list-item figure {
     height: 100%;
     width: 30%;
     margin: auto 0;
 }
 
-.object-list .event-list-item img {
+.object-list .object-list-item img {
     width: 100%;
     max-height: 420px   ;
     object-fit: cover;
     border-radius: var(--amhs-border-radius);
 }
 
-.object-list .event-list-item .event-details {
+.object-list .object-list-item .object-list-item-details {
     width: 70%;
 }
 
@@ -423,7 +423,7 @@ main>article>aside {
 }
 
 #list-filter ul li {
-    margin: 0;main
+    margin: 0;
 }
 
 @media only screen and (min-width:1366px) {
@@ -473,16 +473,16 @@ main>article>aside {
         width: 70%;
     }
 
-    .object-list .event-list-item .event {
+    .object-list .object-list-item .object {
         flex-direction: column;
     }
 
-    .object-list .event-list-item figure,
-    .object-list .event-list-item .event-details {
+    .object-list .object-list-item figure,
+    .object-list .object-list-item .object-list-item-details {
         width: 100%;
     }
 
-    .object-list .event-list-item figure {
+    .object-list .object-list-item figure {
         max-width: 240px;
     }
 }
