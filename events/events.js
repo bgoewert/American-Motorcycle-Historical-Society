@@ -40,13 +40,6 @@ function displayEvents( limit = 0, divideMonths = true, filter = true ) {
             }
 
             data.items.forEach( event => {
-                // Get date object from start date
-                const date = new Date( event.startDate );
-
-                // Create heading for each month
-                const monthNumber = date.toISOString().slice( 5, 7 );
-                const year = date.getFullYear();
-
                 event.active = true;
                 events.push( event );
                 categories.push( { "name": event.category, "active": false } );
