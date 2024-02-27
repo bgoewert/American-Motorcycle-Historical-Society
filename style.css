@@ -2,7 +2,7 @@
     --amhs-dark-blue: #2E3F5C;
     --amhs-bright-blue: #0050DB;
     --amhs-blue: #26519c;
-    --amhs-light-blue: color-mix(in srgb, var(--amhs-bright-blue), white 70%);
+    --amhs-light-blue: color-mix(in srgb, var(--amhs-blue), white 80%);
     --amhs-gold: #DB9500;
     --amhs-light-gold: color-mix(in srgb, var(--amhs-gold), white 60%);
     --amhs-brown: #86692D;
