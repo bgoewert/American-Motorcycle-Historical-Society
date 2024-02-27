@@ -152,7 +152,7 @@ function appendMuseums( divideStates = true ) {
                         <img src="${ museum.image }" alt="Museum logoz for ${ museum.title }">
                     </figure>
                     <div class="object-list-item-details" aria-label="museum details">
-                        <h4>${ museum.title }</h4>
+                        <h3>${ museum.title }</h3>
                         <p>${ museum.description }</p>
                         <address>${ address }</address>
                         <p><a href="${ museum.url }" target="_blank" rel="noopener noreferrer">More info</a></p>
