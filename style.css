@@ -118,7 +118,7 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 input[type="file"]::file-selector-button:hover {
-    border-color: var(--amhs-dark-blue);
+    border-color: var(--amhs-gold);
     background-color: var(--amhs-light-gold);
     cursor: pointer;
 }
@@ -130,6 +130,16 @@ input[type="reset"]:active,
 input[type="button"]:active,
 input[type="file"]::file-selector-button:active {
     background-color: var(--amhs-brown);
+}
+
+.button-reverse {
+    background-color: var(--amhs-bright-blue);
+    color: var(--amhs-white);
+}
+
+.button-reverse:hover {
+    background-color: var(--amhs-light-blue);
+    color: var(--amhs-dark-blue);
 }
 
 nav ul {
