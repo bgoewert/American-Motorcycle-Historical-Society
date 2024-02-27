@@ -168,6 +168,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 1.5em;
+    margin-top: auto;
 }
 
 footer .org-logo {
