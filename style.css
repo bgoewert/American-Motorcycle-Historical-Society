@@ -133,7 +133,7 @@ input[type="file"]::file-selector-button:active {
 }
 
 .button-reverse {
-    background-color: var(--amhs-bright-blue);
+    background-color: var(--amhs-blue);
     color: var(--amhs-white);
 }
 
