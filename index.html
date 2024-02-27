@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg" href="./media/logo/AMHS_Logo_Primary.svg">
     <script src="./events/events.js"></script>
-    <script>document.addEventListener('load', displayEvents(1, false, false));</script>
+    <script>document.addEventListener( 'load', displayEvents( 1, false, false ) );</script>
     <style>
         .hero img {
             object-position: 0 22%;
@@ -51,6 +51,9 @@
         .fifty-fifty>.content-container .content {
             max-width: 600px;
             width: 75%;
+            display: flex;
+            flex-direction: column;
+            gap: var(--amhs-row-gap);
         }
 
         .fifty-fifty>.content-container .content h3 {
@@ -60,25 +63,25 @@
         .fifty-fifty.right {
             flex-direction: row;
             left: var(--amhs-column-gap);
-            background-color: var(--amhs-light-gold);
+            background-color: var(--amhs-dark-blue);
+            color: var(--amhs-white);
         }
 
         .fifty-fifty.left {
             flex-direction: row-reverse;
             right: var(--amhs-column-gap);
-            background-color: var(--amhs-dark-blue);
-            color: var(--amhs-white);
+            background-color: var(--amhs-light-gold);
         }
 
-        main>.fifty-fifty.left h3 {
+        main>.fifty-fifty.right h3 {
             color: var(--amhs-light-gold);
         }
 
-        main>.fifty-fifty.left h4 {
+        main>.fifty-fifty.right h4 {
             color: var(--amhs-white);
         }
 
-        main>.fifty-fifty.left a:not(.button) {
+        main>.fifty-fifty.right a:not(.button) {
             color: var(--amhs-gold);
         }
 
@@ -193,23 +196,32 @@
             <img class="filter-bw-to-blue" src="./media/images/1948_Daytona-200_JosephScherschel-Time&LifePictures_000528184_NorthBank.jpg" alt="Photo of spectators standing on the north sand bank of the 1948 Daytona 200">
             <section class="content-container" aria-label="section-content">
                 <div class="content">
-                    <h3>Upcoming Events</h3>
-                    <article id="list-container" aria-label="list of upcoming events">
-                        <ul class="object-list"></ul>
-                        <aside id="list-filter"></aside>
+                    <article>
+                        <h3>Upcoming Events</h3>
+                        <section id="list-container" aria-label="list of upcoming events">
+                            <ul class="object-list"></ul>
+                            <aside id="list-filter"></aside>
+                        </section>
+                        <a href="./events/" class="button">View All Events</a>
                     </article>
-                    <a href="./events/" class="button">View All Events</a>
                 </div>
             </section>
         </div>
         <div class="fifty-fifty right">
             <img class="filter-bw-to-blue" src="./media/images/1948_Daytona-200_JosephScherschel-Time&LifePictures_000893672_SouthFloridaMC.jpg" alt="Photo taken from behind two South Florida MC members on their Harley-Davidson motorcycles at the 1948 Daytona 200">
             <section class="content-container" aria-label="section-content">
-                <article class="content">
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <button>Learn More</button>
-                </article>
+                <div class="content">
+                    <article>
+                        <h3>Join the AMHS!</h3>
+                        <p>Are you a motorcycle enthusiast with a love for American history? Then join us and become part of a community dedicated to preserving and celebrating the rich legacy of motorcycling in the United States.</p>
+                        <a href="../contribute/" class="button">Join Our Society</a>
+                    </article>
+                    <article>
+                        <h3>Donate!</h3>
+                        <p>Beyond membership, you can also support our mission through a one-time donation. Your contributions help us develop engaging educational programs and exhibits, maintain and expand our collection, and organize exciting events and rallies for motorcycle enthusiasts.</p>
+                        <a href="../contribute/" class="button">Make a Contribution</a>
+                    </article>
+                </div>
             </section>
         </div>
     </main>
