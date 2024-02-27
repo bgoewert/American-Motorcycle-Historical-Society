@@ -26,7 +26,7 @@ function displayEvents( limit = 0, divideMonths = true, filter = true ) {
 
     // if current page is not events, get path
     let json = "";
-    if ( window.location.pathname !== "/events/" ) {
+    if ( window.location.pathname === "/" || window.location.pathname === "/American-Motorcycle-Historical-Society/" ) {
         json = "./events/events.json";
     } else {
         json = "events.json";

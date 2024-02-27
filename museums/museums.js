@@ -85,7 +85,7 @@ const states = [
 function displayMuseums( limit = 0, divideStates = true ) {
 
     let json = "";
-    if ( window.location.pathname !== "/museums/" ) {
+    if ( window.location.pathname === "/" || window.location.pathname === "/American-Motorcycle-Historical-Society/" ) {
         json = "./museums/museums.json";
     } else {
         json = "museums.json";
