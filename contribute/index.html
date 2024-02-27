@@ -35,6 +35,52 @@
             flex-direction: column;
             justify-content: space-between;
         }
+        #membership-levels .object-list {
+            display: flex;
+            flex-direction: row;
+            gap: var(--amhs-column-gap);
+            justify-content: space-evenly;
+            height: 100%;
+        }
+        #membership-levels .object-list-item {
+            width: 30%;
+            height: 100%;
+            flex: 1;
+        }
+        #membership-levels .object-list-item .object {
+            height: 100%;
+        }
+        #membership-levels .object-list-item-details {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        #membership-levels .object-list-item-details h4 {
+            font-style: unset;
+        }
+        #membership-levels .object-list-item-details h5 {
+            font-style: italic;
+            color: var(--amhs-bright-blue);
+        }
+        #membership-levels .membership-benefits {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media only screen and (max-width: 980px) {
+            #membership-levels .object-list {
+                flex-direction: column;
+                gap: var(--amhs-row-padding);
+                justify-content: center;
+            }
+            #membership-levels .object-list-item {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -66,20 +112,19 @@
                 <article>
                     <h2>Join the AMHS!</h2>
                     <p>Are you a motorcycle enthusiast with a love for American history? Then join us and become part of a community dedicated to preserving and celebrating the rich legacy of motorcycling in the United States.</p>
-                    <a href="../contribute/" class="button">Join Our Society</a>
+                    <a href="#membership-levels" class="button">Join Our Society</a>
                 </article>
                 <article>
                     <h2>Donate!</h2>
                     <p>Beyond membership, you can also support our mission through a one-time donation. Your contributions help us develop engaging educational programs and exhibits, maintain and expand our collection, and organize exciting events and rallies for motorcycle enthusiasts.</p>
-                    <a href="../contribute/" class="button">Make a Contribution</a>
+                    <a href="#" class="button">Make a Contribution</a>
                 </article>
             </div>
         </section>
-        <div>
+        <div id="membership-levels">
             <h3>Membership Levels</h3>
             <article id="list-container" aria-label="list of membership tiers">
                 <ul class="object-list"></ul>
-                <aside id="list-filter"></aside>
             </article>
         </div>
     </main>

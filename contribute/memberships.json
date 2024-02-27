@@ -1,0 +1,66 @@
+{
+    "title": "AMHS Memberships",
+    "@type": "Group",
+    "items": [
+        {
+            "id": 1,
+            "title": "Friend",
+            "@type": "Membership",
+            "price": 15,
+            "benefits": [
+                {
+                    "caption": "Monthly Member Newsletter",
+                    "description": "Delivered straight to your inbox, featuring fascinating historical articles, upcoming events, and exclusive behind-the-scenes content."
+                },
+                {
+                    "caption": "Stay Connected",
+                    "description": "Be the first to know about new exhibits, educational programs, and special member-only opportunities."
+                },
+                {
+                    "caption": "Support a Worthy Cause",
+                    "description": "Your membership directly contributes to preserving and sharing American motorcycle history for future generations."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Enthusiast",
+            "@type": "Membership",
+            "price": 55,
+            "benefits": [
+                {
+                    "caption": "Exclusive Member Events",
+                    "description": "Enjoy unique experiences like behind-the-scenes museum tours, meet-and-greets with industry experts, and private social gatherings."
+                },
+                {
+                    "caption": "Discounts on Merchandise",
+                    "description": "Show your love for the AMHS with exclusive discounts on apparel, books, and other memorabilia."
+                },
+                {
+                    "caption": "Recognition in our Annual Report",
+                    "description": "Be listed as a valued supporter of the AMHS mission."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Collector",
+            "@type": "Membership",
+            "price": 250,
+            "benefits": [
+                {
+                    "caption": "Prominent Recognition",
+                    "description": "Your name prominently displayed in our museum and on our website as a dedicated patron."
+                },
+                {
+                    "caption": "Sponsor an Exhibit",
+                    "description": "Make a lasting impact by sponsoring a specific exhibit or educational program that aligns with your passion."
+                },
+                {
+                    "caption": "Invitation to Exclusive Collector Events",
+                    "description": "Connect with fellow motorcycle history collectors at private gatherings and special events."
+                }
+            ]
+        }
+    ]
+}
