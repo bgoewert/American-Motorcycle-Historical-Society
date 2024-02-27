@@ -84,7 +84,14 @@ const states = [
 
 function displayMuseums( limit = 0, divideStates = true ) {
 
-    fetch( "/museums/museums.json" )
+    let json = "";
+    if ( window.location.pathname !== "/museums/" ) {
+        json = "./museums/museums.json";
+    } else {
+        json = "museums.json";
+    }
+
+    fetch( json )
         .then( response => response.json() )
         .then( data => {
 

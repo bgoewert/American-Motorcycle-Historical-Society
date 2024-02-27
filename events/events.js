@@ -24,8 +24,16 @@ const categories = [];
 
 function displayEvents( limit = 0, divideMonths = true, filter = true ) {
 
+    // if current page is not events, get path
+    let json = "";
+    if ( window.location.pathname !== "/events/" ) {
+        json = "./events/events.json";
+    } else {
+        json = "events.json";
+    }
+
     /* Get events from events.json */
-    fetch( "/events/events.json" )
+    fetch( json )
         .then( response => response.json() )
         .then( data => {
 
