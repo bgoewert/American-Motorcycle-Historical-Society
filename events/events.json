@@ -19,7 +19,7 @@
                     "addressCountry": "US"
                 }
             },
-            "image": "/events/images/cycle-showcase-st-louis.jpg",
+            "image": "images/cycle-showcase-st-louis.jpg",
             "url": "https://www.cycleshowcasestl.com/",
             "category": "Motorcycle Show"
         },
@@ -40,7 +40,7 @@
                     "addressCountry": "US"
                 }
             },
-            "image": "/events/images/AMA-LLAQ-Logo.webp",
+            "image": "images/AMA-LLAQ-Logo.webp",
             "url": "https://mxsports.com/event/archview-mx-park",
             "category": "Motocross"
         },
@@ -61,7 +61,7 @@
                     "addressCountry": "US"
                 }
             },
-            "image": "/events/images/Precision-Track-Days-Logo.png",
+            "image": "images/Precision-Track-Days-Logo.png",
             "category": "Track Day",
             "url": "https://precisiontrackday.org/event/talladega-gp-track-days-apr-6th-2024/"
         }

@@ -16,7 +16,7 @@
                     "addressCountry": "US"
                 }
             },
-            "image": "/museums/images/Barber-Vintage-Motorsports-Museum-logo.svg",
+            "image": "images/Barber-Vintage-Motorsports-Museum-logo.svg",
             "url": "http://www.barbermuseum.org/"
         },
         {
@@ -33,7 +33,7 @@
                     "addressCountry": "US"
                 }
             },
-            "image": "/museums/images/Bills-Old-Bike-Barn-logo.png",
+            "image": "images/Bills-Old-Bike-Barn-logo.png",
             "url": "http://www.billsbikebarn.com/"
         }
     ]
