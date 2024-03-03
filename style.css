@@ -162,6 +162,10 @@ footer {
     align-items: center;
 }
 
+header nav {
+    font-size: var(--amhs-h6-size);
+}
+
 footer {
     background-color: var(--amhs-dark-blue);
     color: var(--amhs-white);
@@ -198,8 +202,8 @@ footer a.org:hover {
     text-decoration: none;
 }
 
-header nav {
-    font-size: var(--amhs-h6-size);
+footer nav a.active:not(.button) {
+    color: var(--amhs-gold);
 }
 
 footer .copyright {
