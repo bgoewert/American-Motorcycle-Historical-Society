@@ -28,7 +28,7 @@
             display: flex;
             gap: var(--amhs-column-gap);
             margin: auto;
-            padding: var(--amhs-row-gap);
+            padding: var(--amhs-row-gap) var(--amhs-content-padding);
         }
         #intro div article {
             display: flex;
@@ -82,6 +82,13 @@
             }
             #membership-levels .object-list-item {
                 width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 650px) {
+            #intro div {
+                flex-direction: column;
+                gap: var(--amhs-row-gap);
             }
         }
     </style>
