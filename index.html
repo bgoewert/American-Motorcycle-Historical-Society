@@ -45,7 +45,7 @@
             gap: var(--amhs-row-gap);
             width: 50vw;
             position: relative;
-            margin: var(--amhs-row-padding) 0;
+            margin: var(--amhs-row-gap) 0;
         }
 
         .fifty-fifty>.content-container .content {
@@ -135,9 +135,10 @@
                 height: 50vh;
             }
 
-            .fifty-fifty.left section,
-            .fifty-fifty.right section {
+            .fifty-fifty.left .content-container,
+            .fifty-fifty.right .content-container {
                 align-items: center;
+                width: 100%;
             }
         }
     </style>
