@@ -408,6 +408,7 @@ form textarea {
 
 .manufacturer-logos {
     max-width: unset;
+    padding: 0 5%;
 }
 
 .manufacturer-logos>.container {
@@ -589,6 +590,14 @@ form textarea {
 
     .object-list .object-list-item figure {
         max-width: 240px;
+    }
+
+    .featured-story {
+        flex-direction: column;
+    }
+    .featured-story>img,
+    .featured-story>article {
+        width: 100%;
     }
 }
 
