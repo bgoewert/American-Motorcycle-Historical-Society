@@ -249,6 +249,39 @@ main>article>aside {
     gap: var(--amhs-row-gap);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--amhs-row-padding);
+    justify-content: space-evenly;
+}
+
+form>h2 {
+    margin: 0;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form label {
+    font-size: var(--amhs-h6-size);
+}
+
+form input,
+form textarea {
+    padding: 0.5em;
+    font-size: var(--amhs-h6-size);
+    border-radius: var(--amhs-border-radius);
+    border: 2px solid var(--amhs-dark-blue);
+}
+
+form textarea {
+    height: 8rem;
+}
+
 .subheading {
     font-size: var(--amhs-h5-size);
 }
