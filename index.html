@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     <title>American Motorcycle Historical Society</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/svg" href="./media/logo/AMHS_Logo_Primary.svg">
+    <meta name="robots" content="noindex, nofollow">
     <script src="./events/events.js"></script>
     <script>document.addEventListener( 'load', displayEvents( 1, false, false ) );</script>
     <style>
@@ -150,13 +150,15 @@
                 <img class="org-logo" src="./media/logo/AMHS_Logo_Primary.webp" alt="Logo for American Motorcycle Historical Society">
                 <h1 class="org-name">American Motorcycle Historical Society</h1>
             </a>
-            <nav>
+            <nav id="main-menu">
+                <input type="checkbox" id="mobile-main-menu" class="responsive-menu">
+                <label for="mobile-main-menu" aria-label="Mobile Menu Toggle"></label>
                 <ul>
                     <li><a href="./motorcycles/">Motorcycles</a></li>
                     <li><a href="./events/">Events</a></li>
                     <li><a href="./museums/">Museums</a></li>
                     <li><a href="./contribute/">Contribute</a></li>
-                    <li><img src="media/icons/magnifying-glass.svg" alt="search icon"></li>
+                    <li class="search-container"><img src="media/icons/magnifying-glass.svg" alt="search icon"></li>
                 </ul>
             </nav>
         </header>

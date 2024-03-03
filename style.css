@@ -156,14 +156,64 @@ body .org-name {
 
 header,
 footer {
-    padding: 2em 2%;
+    padding: 1rem 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header nav {
+nav#main-menu {
     font-size: var(--amhs-h6-size);
+}
+
+nav label[for=mobile-main-menu] {
+    display: none;
+    font-size: var(--amhs-h1-size);
+}
+nav label[for=mobile-main-menu]::before {
+    content: "☰";
+    cursor: pointer;
+}
+nav input[type=checkbox]#mobile-main-menu {
+    display: none;
+}
+nav input[type=checkbox]#mobile-main-menu:checked~label[for=mobile-main-menu] {
+    position: fixed;
+    z-index: 101;
+    content: "Close";
+    top: 5%;
+    right: 5%;
+}
+nav input[type=checkbox]#mobile-main-menu:checked~label[for=mobile-main-menu]::before {
+    content: "✖";
+    animation: mobile-menu-slide-in 0.15s ease-in-out;
+}
+nav input[type=checkbox]#mobile-main-menu:checked~ul {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--amhs-light-gold);
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    margin: 0;
+    z-index: 100;
+    animation: mobile-menu-slide-in 0.15s ease-in-out;
+}
+
+@keyframes mobile-menu-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 footer {
@@ -490,7 +540,7 @@ form textarea {
     }
 
     .hero>section {
-        top: 60%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -500,6 +550,12 @@ form textarea {
     footer {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    body>header,
+    body>.page-cover>header {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
@@ -536,8 +592,12 @@ form textarea {
     }
 }
 
-@media only screen and (max-height:500px) {
-    .hero>section {
-        top: 60%;
+@media only screen and (max-width:600px) {
+    nav#main-menu label[for=mobile-main-menu] {
+        display: block;
+        cursor: pointer;
+    }
+    nav#main-menu ul {
+        display: none;
     }
 }
