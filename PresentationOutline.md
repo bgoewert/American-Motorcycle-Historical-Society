@@ -25,6 +25,7 @@
     - Calendar date filter
     - Content management
     - Membership page
+    - Historical Articles
 
 6. **Conclusion**
     - Thank for time
