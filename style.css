@@ -613,3 +613,9 @@ form textarea {
         display: none;
     }
 }
+
+@media only screen and (max-height: 720px) {
+    .hero>section {
+        top: 60%;
+    }
+}
