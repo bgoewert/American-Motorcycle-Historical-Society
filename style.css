@@ -4,6 +4,7 @@
     --amhs-blue: #26519c;
     --amhs-light-blue: color-mix(in srgb, var(--amhs-blue), white 80%);
     --amhs-gold: #DB9500;
+    --amhs-gold-wcag-aa: #e69c00;
     --amhs-light-gold: color-mix(in srgb, var(--amhs-gold), white 60%);
     --amhs-brown: #86692D;
     --amhs-white: #F5F5F5;
@@ -84,6 +85,7 @@ h6 {
 a:not(.button) {
     color: var(--amhs-bright-blue);
     text-decoration: none;
+    font-weight: 700;
 }
 
 a:hover:not(.button) {
