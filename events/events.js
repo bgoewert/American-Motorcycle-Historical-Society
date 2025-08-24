@@ -111,13 +111,13 @@ function appendEvents( divideMonths = true ) {
                     <figure>
                         <img src="${ event.image }" alt="Event image for ${ event.title }">
                     </figure>
-                    <div class="object-list-item-details" aria-label="event details">
+                    <section class="object-list-item-details">
                         <h4>${ event.title }</h4>
                         <time datetime="${ event.startDate }/${ event.endDate }">${ dateFormatted }</time>
                         <p>${ event.description }</p>
                         <address>${ address }</address>
                         <p><a href="${ event.url }" target="_blank" rel="noopener noreferrer">More info</a></p>
-                    </div>
+                    </section>
                 </article>
                 </li>`;
 
