@@ -138,11 +138,11 @@ function appendEvents( divideMonths = true ) {
 
 function appendCategoryFilter() {
     const categoryFilter = $( "#list-filter" );
-
     const categoryList = document.createElement( "ul" );
-    categoryList.id = "event-category-list";
 
-    categoryList.innerHTML += '<h5>Filter by category</h5>';
+    categoryFilter.innerHTML += '<h5>Filter by category</h5>';
+
+    categoryList.id = "event-category-list";
 
     categories.forEach( category => {
         const slug = category.name.toLowerCase().replace( " ", "-" );

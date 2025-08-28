@@ -478,7 +478,7 @@ form textarea {
     min-width: fit-content;
     display: flex;
     flex-direction: column;
-    gap: var(--amhs-row-gap);
+    gap: var(--amhs-h5-size);
 }
 
 .object-list {
