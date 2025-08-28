@@ -149,7 +149,7 @@ function appendMuseums( divideStates = true ) {
         list += `<li class="object-list-item">\
                 <article class="object">
                     <figure>
-                        <img src="${ museum.image }" alt="Museum logoz for ${ museum.title }">
+                        <img src="${ museum.image }" alt="Museum logos for ${ museum.title }">
                     </figure>
                     <section class="object-list-item-details">
                         <h3>${ museum.title }</h3>
